@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Tejasave Bisen — Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1a1a1a;
+      font-size: 13px;
+      line-height: 1.6;
+      padding: 36px 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      font-size: 12px;
+      color: #333;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .contact span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1.5px solid #1a1a1a;
+      margin: 6px 0 14px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 8px;
+      margin-top: 18px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 3px;
+    }
+
+    .summary {
+      font-size: 13px;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .summary strong {
+      color: #1a1a1a;
+    }
+
+    /* Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .skills-table tr td {
+      padding: 3px 0;
+      vertical-align: top;
+    }
+
+    .skills-table tr td:first-child {
+      font-weight: 700;
+      width: 130px;
+      color: #1a1a1a;
+      font-size: 12.5px;
+    }
+
+    .skills-table tr td:last-child {
+      color: #333;
+      font-size: 12.5px;
+    }
+
+    /* Experience */
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-title {
+      font-weight: 700;
+      font-size: 13.5px;
+    }
+
+    .exp-date {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .exp-company {
+      font-size: 12.5px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .exp-list {
+      padding-left: 18px;
+    }
+
+    .exp-list li {
+      margin-bottom: 4px;
+      font-size: 12.5px;
+      color: #222;
+    }
+
+    .exp-block {
+      margin-bottom: 16px;
+    }
+
+    /* Projects */
+    .project-block {
+      margin-bottom: 12px;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 3px;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .project-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .project-desc {
+      font-size: 12.5px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Education */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .edu-title {
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .edu-school {
+      font-size: 12.5px;
+      color: #555;
+      margin-top: 2px;
+    }
+
+    /* Core CS tags */
+    .cs-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .cs-tag {
+      border: 1px solid #2563eb;
+      color: #2563eb;
+      border-radius: 20px;
+      padding: 2px 12px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    @media print {
+      body {
+        padding: 20px 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Tejasave Bisen</h1>
+  <div class="subtitle">Full Stack Engineer — Distributed Systems, Real-Time Applications &amp; AI Pipelines</div>
+  <div class="contact">
+    <span>📍 Bhopal, India</span>
+    <span>📞 9201729633</span>
+    <span>✉ tejasavebisen@gmail.com</span>
+    <span>🔗 linkedin.com/in/tejasavebisen</span>
+    <span>🐙 github.com/Bisenteju3822</span>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="section-title">Professional Summary</div>
+  <hr />
+  <div class="summary">
+    Full Stack Engineer specializing in <strong>distributed systems, real-time multiplayer infrastructure, AI-powered
+      search, and modern React frontend development</strong>.
+    Delivered production systems handling <strong>1,000+ concurrent users</strong> and processed <strong>10,000+ vector
+      embeddings</strong> for semantic retrieval. Proven ability to reduce API latency by <strong>40%</strong> through
+    strategic caching and architecture decisions. Built AI pipeline builders with <strong>ReactFlow and
+      Zustand</strong>,
+    implementing dynamic node abstraction and DAG cycle detection.
+    Passionate about high-performance engineering, event-driven design, and building systems that scale.
+  </div>
+
+  <!-- SKILLS -->
+  <div class="section-title">Technical Skills</div>
+  <hr />
+  <table class="skills-table">
+    <tr>
+      <td>Backend</td>
+      <td>Node.js, TypeScript, Express.js, NestJS, FastAPI, Python, REST APIs</td>
+    </tr>
+    <tr>
+      <td>Frontend</td>
+      <td>React.js, Next.js, ReactFlow, Zustand, CSS3, REST API Integration</td>
+    </tr>
+    <tr>
+      <td>Real-Time</td>
+      <td>WebSocket, Colyseus, Multiplayer Game Servers</td>
+    </tr>
+    <tr>
+      <td>Messaging</td>
+      <td>Kafka, Event-Driven Architecture</td>
+    </tr>
+    <tr>
+      <td>Caching</td>
+      <td>Redis</td>
+    </tr>
+    <tr>
+      <td>Databases</td>
+      <td>PostgreSQL, pgvector, MongoDB</td>
+    </tr>
+    <tr>
+      <td>Search / AI</td>
+      <td>OpenSearch, Vector Search, OpenAI Embeddings, AI Pipeline Design</td>
+    </tr>
+    <tr>
+      <td>DevOps</td>
+      <td>Docker, NGINX, Git, Linux</td>
+    </tr>
+  </table>
+
+  <!-- EXPERIENCE -->
+  <div class="section-title">Professional Experience</div>
+  <hr />
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-title">Full Stack Developer</span>
+      <span class="exp-date">Sep 2025 – Present</span>
+    </div>
+    <div class="exp-company">Fractorize Software — Remote</div>
+    <ul class="exp-list">
+      <li>Architected an <strong>AI-powered semantic product search system</strong> using OpenSearch and vector
+        embeddings, enabling contextual retrieval beyond keyword matching.</li>
+      <li>Generated and indexed <strong>10,000+ product embeddings</strong> via OpenAI models, reducing search
+        irrelevance and improving discovery accuracy.</li>
+      <li>Integrated <strong>PostgreSQL + pgvector</strong> for high-performance vector similarity queries, enabling
+        sub-second semantic lookups at scale.</li>
+      <li>Designed high-throughput backend APIs in <strong>Node.js + TypeScript</strong> with Redis caching and Kafka
+        event streaming, supporting real-time data pipelines.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-title">Backend Developer</span>
+      <span class="exp-date">Apr 2025 – Sep 2025</span>
+    </div>
+    <div class="exp-company">Playniya Pvt. Ltd. — Bhopal</div>
+    <ul class="exp-list">
+      <li>Built a <strong>real-time multiplayer game backend</strong> using WebSocket and Colyseus, sustaining
+        <strong>1,000+ concurrent players</strong> with stable room lifecycle management.
+      </li>
+      <li>Designed a <strong>matchmaking engine</strong> with dynamic room allocation, reducing player wait times and
+        improving session fill rates.</li>
+      <li>Reduced <strong>API latency by 40%</strong> by implementing Redis caching for frequently accessed game state
+        and player data.</li>
+      <li>Built a <strong>Kafka-based event pipeline</strong> for reliable, ordered game event processing, decoupling
+        game logic from data persistence.</li>
+      <li>Deployed an <strong>NGINX API Gateway</strong> with JWT authentication and rate limiting, securing
+        microservice communication and preventing abuse.</li>
+      <li>Containerized all services with <strong>Docker</strong>, enabling consistent deployments and horizontal
+        scalability across environments.</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-title">MERN Stack Trainee</span>
+      <span class="exp-date">Jun 2024 – Mar 2025</span>
+    </div>
+    <div class="exp-company">Cybrom Technology Pvt. Ltd. — Bhopal</div>
+    <ul class="exp-list">
+      <li>Built full-stack applications using <strong>React, Node.js, Express, and MongoDB</strong>, covering auth
+        flows, REST APIs, and optimized DB queries.</li>
+      <li>Delivered a <strong>Healthcare Appointment System</strong> with FHIR-compliant data models, patient
+        registration, and scheduling APIs as a capstone project.</li>
+    </ul>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section-title">Key Projects</div>
+  <hr />
+
+  <div class="project-block">
+    <div class="project-header">
+      <span class="project-title">AI Pipeline Builder</span>
+      <div class="project-tags">
+        <span class="project-tag">React</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">ReactFlow</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">Zustand</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">FastAPI</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">Python</span>
+      </div>
+    </div>
+    <div class="project-desc">
+      Built a node-based AI pipeline builder with 9 custom node types using ReactFlow and Zustand state management.
+      Implemented <strong>BaseNode abstraction pattern</strong> reducing per-node code by 70%, dynamic
+      <strong>{{variable}} handle generation</strong>
+      via regex in Text Node, and <strong>DAG cycle detection</strong> using DFS 3-color algorithm in FastAPI backend.
+      Dark-themed
+      professional UI with animated edges and real-time pipeline analysis.
+    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-header">
+      <span class="project-title">AI Semantic Search Engine</span>
+      <div class="project-tags">
+        <span class="project-tag">Nest.js</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">OpenSearch</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">pgvector</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">OpenAI</span>
+      </div>
+    </div>
+    <div class="project-desc">
+      Designed a full-pipeline semantic search system: ingests product data → generates embeddings via OpenAI → stores
+      in
+      PostgreSQL with pgvector → retrieves via cosine similarity through OpenSearch. Supports contextual queries that
+      keyword
+      search cannot handle, dramatically improving product discoverability.
+    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-header">
+      <span class="project-title">Multiplayer Tetris Game Server</span>
+      <div class="project-tags">
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">Colyseus</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">WebSocket</span>
+      </div>
+    </div>
+    <div class="project-desc">
+      Built a low-latency real-time game server with deterministic state synchronization across clients, latency
+      compensation logic,
+      and server-side anti-cheat validation. Designed to scale room capacity dynamically under load.
+    </div>
+  </div>
+
+  <div class="project-block">
+    <div class="project-header">
+      <span class="project-title">Healthcare Appointment System</span>
+      <div class="project-tags">
+        <span class="project-tag">React</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">Nest.js</span>
+        <span class="project-tag">·</span>
+        <span class="project-tag">postgreSQL</span>
+      </div>
+    </div>
+    <div class="project-desc">
+      Developed patient registration and appointment scheduling APIs modeled on healthcare FHIR standards. Implemented
+      secure
+      authentication, conflict-free slot management, and a clean React frontend for booking workflows.
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section-title">Education</div>
+  <hr />
+  <div class="edu-header">
+    <span class="edu-title">B.Tech — Computer Science Engineering</span>
+    <span class="exp-date">2024</span>
+  </div>
+  <div class="edu-school">Oriental College of Technology, Bhopal &nbsp;|&nbsp; Affiliated to Rajiv Gandhi Proudyogiki
+    Vishwavidyalaya &nbsp;|&nbsp; GPA equivalent: 79%</div>
+
+  <!-- CORE CS -->
+  <div class="section-title">Core Computer Science</div>
+  <hr />
+  <div class="cs-tags">
+    <span class="cs-tag">Data Structures &amp; Algorithms</span>
+    <span class="cs-tag">Object-Oriented Programming</span>
+    <span class="cs-tag">Operating Systems</span>
+    <span class="cs-tag">Computer Networks</span>
+    <span class="cs-tag">System Design</span>
+    <span class="cs-tag">Graph Algorithms</span>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+magento-backend/node_modules
+magento-backend/dist
+magento-frontned/node_modules
+magento-frontned/dist
