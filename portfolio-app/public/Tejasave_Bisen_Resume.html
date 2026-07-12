@@ -3,8 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Tejasave Bisen — Resume</title>
+  <title>Tejasave Bisen — Full Stack Engineer</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -12,205 +14,255 @@
     }
 
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      color: #1a1a1a;
-      font-size: 13px;
-      line-height: 1.6;
-      padding: 36px 48px;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      color: #1a1a2e;
+      font-size: 12.5px;
+      line-height: 1.55;
+      padding: 32px 44px;
       max-width: 900px;
       margin: 0 auto;
+      background: #fff;
     }
 
-    h1 {
-      font-size: 28px;
+    /* ===== HEADER ===== */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2.5px solid #1a1a2e;
+    }
+
+    .header-left h1 {
+      font-size: 32px;
       font-weight: 800;
-      letter-spacing: -0.5px;
-      text-transform: uppercase;
+      letter-spacing: -1px;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+    }
+
+    .header-left .title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #4f46e5;
       margin-bottom: 2px;
     }
 
-    .subtitle {
-      font-size: 13px;
-      color: #444;
-      margin-bottom: 8px;
-    }
-
-    .contact {
+    .header-left .tagline {
       font-size: 12px;
-      color: #333;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 20px;
+      color: #64748b;
+      font-weight: 400;
     }
 
-    .contact a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-
-    .contact span {
+    .header-right {
+      text-align: right;
+      font-size: 12px;
+      color: #475569;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       gap: 4px;
     }
 
-    hr {
-      border: none;
-      border-top: 1.5px solid #1a1a1a;
-      margin: 6px 0 14px;
+    .header-right a {
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 500;
     }
 
+    .header-right .location {
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+
+    /* ===== SECTIONS ===== */
     .section-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #2563eb;
-      margin-bottom: 8px;
+      color: #4f46e5;
       margin-top: 18px;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 3px;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1.5px solid #e2e8f0;
     }
 
+    /* ===== SUMMARY ===== */
     .summary {
-      font-size: 13px;
-      color: #222;
+      font-size: 12.5px;
+      color: #334155;
       line-height: 1.7;
+      padding: 10px 14px;
+      background: #f8fafc;
+      border-left: 3px solid #4f46e5;
+      border-radius: 0 6px 6px 0;
     }
 
     .summary strong {
-      color: #1a1a1a;
+      color: #1a1a2e;
+      font-weight: 600;
     }
 
-    .skills-table {
-      width: 100%;
-      border-collapse: collapse;
+    /* ===== SKILLS ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
     }
 
-    .skills-table tr td {
+    .skill-row {
+      display: flex;
+      gap: 8px;
+      font-size: 12px;
       padding: 3px 0;
-      vertical-align: top;
     }
 
-    .skills-table tr td:first-child {
+    .skill-label {
       font-weight: 700;
-      width: 130px;
-      color: #1a1a1a;
-      font-size: 12.5px;
+      color: #1a1a2e;
+      min-width: 100px;
+      font-size: 11.5px;
     }
 
-    .skills-table tr td:last-child {
-      color: #333;
-      font-size: 12.5px;
+    .skill-value {
+      color: #475569;
+      font-size: 11.5px;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    .exp-block {
+      margin-bottom: 16px;
     }
 
     .exp-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
-    .exp-title {
+    .exp-role {
       font-weight: 700;
-      font-size: 13.5px;
+      font-size: 14px;
+      color: #1a1a2e;
     }
 
     .exp-date {
-      font-size: 12px;
-      color: #555;
+      font-size: 11.5px;
+      color: #4f46e5;
+      font-weight: 600;
     }
 
     .exp-company {
       font-size: 12.5px;
-      color: #555;
+      color: #64748b;
       margin-bottom: 6px;
+      font-weight: 500;
     }
 
     .exp-list {
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
     .exp-list li {
       margin-bottom: 4px;
-      font-size: 12.5px;
-      color: #222;
+      font-size: 12px;
+      color: #334155;
+      line-height: 1.6;
     }
 
-    .exp-block {
-      margin-bottom: 16px;
+    .exp-list li strong {
+      color: #1a1a2e;
+      font-weight: 600;
     }
 
+    .metric {
+      color: #4f46e5;
+      font-weight: 700;
+    }
+
+    /* ===== PROJECTS ===== */
     .project-block {
-      margin-bottom: 12px;
+      margin-bottom: 11px;
     }
 
     .project-header {
       display: flex;
       align-items: baseline;
       gap: 10px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
-    .project-title {
+    .project-name {
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12.5px;
+      color: #1a1a2e;
     }
 
-    .project-tags {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .project-tag {
+    .project-tech {
       font-size: 11px;
-      color: #2563eb;
+      color: #4f46e5;
       font-weight: 500;
     }
 
     .project-desc {
-      font-size: 12.5px;
-      color: #333;
+      font-size: 12px;
+      color: #475569;
       line-height: 1.6;
     }
 
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
+    .project-link {
+      font-size: 11px;
+      color: #4f46e5;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    .edu-title {
+    /* ===== EDUCATION ===== */
+    .edu-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-degree {
       font-weight: 700;
       font-size: 13px;
+      color: #1a1a2e;
     }
 
     .edu-school {
-      font-size: 12.5px;
-      color: #555;
+      font-size: 12px;
+      color: #64748b;
       margin-top: 2px;
     }
 
-    .cs-tags {
+    /* ===== CS TAGS ===== */
+    .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
       margin-top: 8px;
     }
 
-    .cs-tag {
-      border: 1px solid #2563eb;
-      color: #2563eb;
+    .tag {
+      border: 1.5px solid #4f46e5;
+      color: #4f46e5;
       border-radius: 20px;
       padding: 2px 12px;
-      font-size: 11.5px;
-      font-weight: 500;
+      font-size: 11px;
+      font-weight: 600;
     }
 
     @media print {
       body {
-        padding: 20px 36px;
+        padding: 16px 32px;
+        font-size: 12px;
+      }
+      .summary {
+        background: none;
+        border-left: 2px solid #4f46e5;
       }
     }
   </style>
@@ -218,259 +270,204 @@
 
 <body>
 
-  <h1>Tejasave Bisen</h1>
-  <div class="subtitle">Full Stack Engineer — Healthcare Systems, AI/LLM Integration &amp; Distributed Architecture</div>
-  <div class="contact">
-    <span>Bhopal, India</span>
-    <span>+91 9201729633</span>
-    <span>tejasavebisen@gmail.com</span>
-    <span><a href="https://linkedin.com/in/tejasavebisen">linkedin.com/in/tejasavebisen</a></span>
-    <span><a href="https://github.com/Bisenteju3822">github.com/Bisenteju3822</a></span>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <h1>Tejasave Bisen</h1>
+      <div class="title">Full Stack Engineer</div>
+      <div class="tagline">Healthcare Systems &bull; AI/LLM Integration &bull; Distributed Architecture</div>
+    </div>
+    <div class="header-right">
+      <span class="location">Bhopal, India</span>
+      <span>+91 9201729633</span>
+      <a href="mailto:tejasavebisen@gmail.com">tejasavebisen@gmail.com</a>
+      <a href="https://linkedin.com/in/tejasavebisen">linkedin.com/in/tejasavebisen</a>
+      <a href="https://github.com/Bisenteju3822">github.com/Bisenteju3822</a>
+    </div>
   </div>
 
   <!-- SUMMARY -->
-  <div class="section-title">Professional Summary</div>
-  <hr />
+  <div class="section-title">Summary</div>
   <div class="summary">
-    Full Stack Engineer with <strong>1.5+ years</strong> of experience building <strong>production healthcare platforms,
-    AI-powered clinical tools, and distributed backend systems</strong>.
-    Delivered a <strong>FHIR-compliant EHR platform</strong> for a hospital with 12+ modules including patient management,
-    OT scheduling, pharmacy, billing, and DICOM medical imaging.
-    Built <strong>AI clinical agents</strong> using LangChain/LangGraph for automated diagnosis support.
-    Architected real-time systems handling <strong>1,000+ concurrent users</strong> and semantic search engines processing
-    <strong>10,000+ vector embeddings</strong>. Reduced API latency by <strong>40%</strong> through Redis caching and
-    event-driven architecture.
+    Full Stack Engineer with <strong>1.5+ years</strong> building <strong>production healthcare platforms</strong> and
+    <strong>AI-powered systems</strong>. Delivered a <strong>12-module FHIR-compliant EHR system</strong> for a hospital
+    serving real patients. Built <strong>AI clinical agents</strong> with LangChain/LangGraph and <strong>semantic search
+    engines</strong> processing <strong>10,000+ vector embeddings</strong>. Reduced API latency by
+    <strong>40%</strong> through Redis caching. Experienced in <strong>React, NestJS, PostgreSQL, Docker, and microservices</strong>.
   </div>
 
   <!-- SKILLS -->
   <div class="section-title">Technical Skills</div>
-  <hr />
-  <table class="skills-table">
-    <tr>
-      <td>Languages</td>
-      <td>TypeScript, JavaScript, Python, SQL, C++</td>
-    </tr>
-    <tr>
-      <td>Frontend</td>
-      <td>React 19, Next.js, Redux Toolkit, RTK Query, Tailwind CSS, Framer Motion, ReactFlow, Zustand, Recharts</td>
-    </tr>
-    <tr>
-      <td>Backend</td>
-      <td>NestJS, Node.js, Express.js, FastAPI, REST APIs, GraphQL, Prisma, TypeORM, Sequelize</td>
-    </tr>
-    <tr>
-      <td>AI / LLM</td>
-      <td>LangChain, LangGraph, OpenAI Embeddings, RAG, pgvector, Vector Search, OpenSearch, Groq, Claude API</td>
-    </tr>
-    <tr>
-      <td>Healthcare</td>
-      <td>FHIR/HL7, HAPI FHIR, DICOM, OHIF Viewer, Clinical Workflows, EHR Systems</td>
-    </tr>
-    <tr>
-      <td>Databases</td>
-      <td>PostgreSQL, pgvector, MongoDB, Redis, SQLite, OpenSearch</td>
-    </tr>
-    <tr>
-      <td>Real-Time</td>
-      <td>WebSocket, Socket.io, Colyseus, Kafka, RabbitMQ (AMQP), BullMQ, SSE</td>
-    </tr>
-    <tr>
-      <td>DevOps</td>
-      <td>Docker, NGINX, Turborepo, Git, Linux, Azure VM, Vercel, Render</td>
-    </tr>
-    <tr>
-      <td>Auth</td>
-      <td>JWT, Passport.js, bcrypt, RBAC, OAuth, Swagger/OpenAPI</td>
-    </tr>
-    <tr>
-      <td>Testing</td>
-      <td>Playwright, Vitest, Jest, E2E Testing</td>
-    </tr>
-  </table>
+  <div class="skills-grid">
+    <div class="skill-row">
+      <span class="skill-label">Languages</span>
+      <span class="skill-value">TypeScript, JavaScript, Python, SQL, C++</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Frontend</span>
+      <span class="skill-value">React 19, Next.js, Redux Toolkit, Tailwind, Framer Motion</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Backend</span>
+      <span class="skill-value">NestJS, Node.js, Express, FastAPI, TypeORM, Prisma</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">AI / LLM</span>
+      <span class="skill-value">LangChain, LangGraph, OpenAI, RAG, pgvector, Groq</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Healthcare</span>
+      <span class="skill-value">FHIR/HL7, HAPI FHIR, DICOM, OHIF Viewer, EHR</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Databases</span>
+      <span class="skill-value">PostgreSQL, MongoDB, Redis, OpenSearch, SQLite</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Real-Time</span>
+      <span class="skill-value">WebSocket, Socket.io, Kafka, RabbitMQ, BullMQ</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">DevOps</span>
+      <span class="skill-value">Docker, NGINX, Turborepo, Git, Vercel, Linux</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Auth / API</span>
+      <span class="skill-value">JWT, Passport, RBAC, OAuth, Swagger/OpenAPI</span>
+    </div>
+    <div class="skill-row">
+      <span class="skill-label">Testing</span>
+      <span class="skill-value">Playwright, Vitest, Jest, E2E, Integration Tests</span>
+    </div>
+  </div>
 
   <!-- EXPERIENCE -->
-  <div class="section-title">Professional Experience</div>
-  <hr />
+  <div class="section-title">Experience</div>
 
   <div class="exp-block">
     <div class="exp-header">
-      <span class="exp-title">Full Stack Developer</span>
+      <span class="exp-role">Full Stack Developer</span>
       <span class="exp-date">Sep 2025 – Present</span>
     </div>
-    <div class="exp-company">Fractorize Software — Remote</div>
+    <div class="exp-company">Fractorize Software &mdash; Remote</div>
     <ul class="exp-list">
-      <li>Built a <strong>FHIR-compliant EHR platform</strong> for Neuro Foundation Hospital with 12+ modules: patient
-        registration, appointment scheduling, clinical notes, lab investigations, pharmacy, billing, and OT management.</li>
-      <li>Developed <strong>role-based dashboards</strong> (Admin, Consultant, Nurse) with React 19 + Redux Toolkit,
-        serving hospital staff with real-time updates via Socket.io.</li>
-      <li>Integrated <strong>OHIF DICOM Viewer</strong> for inline medical image viewing (X-rays, CT scans) directly
-        within patient records.</li>
-      <li>Built <strong>AI-powered pharmacy features</strong> using LangChain for drug interaction checks and intelligent
-        prescription assistance.</li>
-      <li>Architected an <strong>AI semantic search engine</strong> using OpenSearch + pgvector, generating 10,000+
-        embeddings via OpenAI for sub-second contextual product retrieval.</li>
-      <li>Developed a <strong>reusable auth library</strong> (@fractorize/auth-lib) as an npm package with NestJS guards,
-        JWT validation, and RBAC decorators used across 5+ microservices.</li>
-      <li>Built <strong>prescription and medication APIs</strong> with NestJS + TypeORM + RabbitMQ for async event processing
-        and audit trails.</li>
-      <li>Wrote <strong>Playwright E2E tests</strong> and Vitest unit tests ensuring production reliability across all modules.</li>
+      <li>Built a <strong>FHIR-compliant EHR platform</strong> for Neuro Foundation Hospital with <span class="metric">12+ modules</span>
+        — patient management, OT scheduling, pharmacy, billing, clinical notes, lab bridge, and DICOM imaging.</li>
+      <li>Developed <strong>role-based dashboards</strong> (Admin / Consultant / Nurse) in React 19 + Redux Toolkit with
+        real-time updates via Socket.io serving <span class="metric">hospital staff daily</span>.</li>
+      <li>Integrated <strong>OHIF DICOM Viewer</strong> for inline viewing of X-rays and CT scans within patient records.</li>
+      <li>Built <strong>AI-powered pharmacy features</strong> using LangChain — drug interaction checks and
+        intelligent prescription assistance.</li>
+      <li>Architected a <strong>semantic search engine</strong> with OpenSearch + pgvector, indexing
+        <span class="metric">10,000+ embeddings</span> via OpenAI for sub-second contextual product retrieval.</li>
+      <li>Created <strong>@fractorize/auth-lib</strong> — a reusable npm auth package with NestJS guards, JWT validation,
+        and RBAC decorators used across <span class="metric">5+ microservices</span>.</li>
+      <li>Built <strong>prescription &amp; medication APIs</strong> (NestJS + TypeORM + RabbitMQ) with async event processing
+        and audit logging.</li>
+      <li>Wrote <strong>Playwright E2E tests</strong> and Vitest unit tests, maintaining
+        <span class="metric">production reliability</span> across all modules.</li>
     </ul>
   </div>
 
   <div class="exp-block">
     <div class="exp-header">
-      <span class="exp-title">Backend Developer</span>
+      <span class="exp-role">Backend Developer</span>
       <span class="exp-date">Apr 2025 – Sep 2025</span>
     </div>
-    <div class="exp-company">Playniya Pvt. Ltd. — Bhopal</div>
+    <div class="exp-company">Playniya Pvt. Ltd. &mdash; Bhopal</div>
     <ul class="exp-list">
-      <li>Built a <strong>real-time multiplayer game backend</strong> using WebSocket and Colyseus, sustaining
-        <strong>1,000+ concurrent players</strong> with stable room lifecycle management.</li>
+      <li>Built a <strong>real-time multiplayer game server</strong> (WebSocket + Colyseus) handling
+        <span class="metric">1,000+ concurrent players</span> with stable room lifecycle management.</li>
       <li>Designed a <strong>matchmaking engine</strong> with dynamic room allocation, reducing player wait times.</li>
-      <li>Reduced <strong>API latency by 40%</strong> with Redis caching for game state and player data.</li>
-      <li>Built a <strong>Kafka-based event pipeline</strong> for reliable, ordered game event processing.</li>
-      <li>Deployed <strong>NGINX API Gateway</strong> with JWT authentication and rate limiting.</li>
-      <li>Containerized all services with <strong>Docker</strong> for horizontal scalability.</li>
+      <li>Reduced <strong>API latency by <span class="metric">40%</span></strong> via Redis caching for game state and player data.</li>
+      <li>Built a <strong>Kafka event pipeline</strong> for ordered, reliable game event processing.</li>
+      <li>Deployed <strong>NGINX API Gateway</strong> with JWT auth and rate limiting; containerized all services with Docker.</li>
     </ul>
   </div>
 
   <div class="exp-block">
     <div class="exp-header">
-      <span class="exp-title">MERN Stack Trainee</span>
+      <span class="exp-role">MERN Stack Trainee</span>
       <span class="exp-date">Jun 2024 – Mar 2025</span>
     </div>
-    <div class="exp-company">Cybrom Technology Pvt. Ltd. — Bhopal</div>
+    <div class="exp-company">Cybrom Technology Pvt. Ltd. &mdash; Bhopal</div>
     <ul class="exp-list">
-      <li>Built full-stack applications using <strong>React, Node.js, Express, and MongoDB</strong> with auth flows and REST APIs.</li>
-      <li>Delivered a <strong>Healthcare Appointment System</strong> with FHIR-compliant data models as capstone project.</li>
+      <li>Built full-stack apps with <strong>React, Node.js, Express, MongoDB</strong> — auth flows, REST APIs, state management.</li>
+      <li>Delivered a <strong>Healthcare Appointment System</strong> with FHIR data models as capstone project.</li>
     </ul>
   </div>
 
   <!-- PROJECTS -->
-  <div class="section-title">Key Projects</div>
-  <hr />
+  <div class="section-title">Projects</div>
 
   <div class="project-block">
     <div class="project-header">
-      <span class="project-title">Healthcare EHR Platform — Neuro Foundation Hospital</span>
-      <div class="project-tags">
-        <span class="project-tag">React 19</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">NestJS</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">PostgreSQL</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">FHIR</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">OHIF/DICOM</span>
-      </div>
+      <span class="project-name">AI Clinical Agent — "Dr. Watson"</span>
+      <span class="project-tech">LangChain &bull; LangGraph &bull; FastAPI &bull; OpenAI &bull; RAG</span>
     </div>
     <div class="project-desc">
-      Production EHR system with 12+ modules: patient management, appointments, clinical notes, lab bridge, pharmacy,
-      billing, OT management, and DICOM medical imaging. Role-based access for Admin, Consultant, and Nurse dashboards.
-      Redux Toolkit for state, Playwright for E2E testing, Socket.io for real-time updates.
+      LangGraph state-machine agent with 5 tools: biomedical analyzer, reference validator, risk assessor, clinical note writer.
+      Auto-triages lab reports as Routine/Urgent/Critical. RAG pipeline for hospital policy retrieval.
+      <a href="https://github.com/Bisenteju3822/my-portfolio/tree/main/AI-Agent" class="project-link">[GitHub]</a>
     </div>
   </div>
 
   <div class="project-block">
     <div class="project-header">
-      <span class="project-title">AI Clinical Agent — "Dr. Watson"</span>
-      <div class="project-tags">
-        <span class="project-tag">LangChain</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">LangGraph</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">FastAPI</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">OpenAI</span>
-      </div>
+      <span class="project-name">AI Pipeline Builder</span>
+      <span class="project-tech">React &bull; ReactFlow &bull; Zustand &bull; FastAPI &bull; Python</span>
     </div>
     <div class="project-desc">
-      AI-powered clinical triage agent using LangGraph state machine with 5 specialized tools: biomedical analysis,
-      reference validation, risk assessment, and automated clinical note generation. Analyzes lab reports and
-      assigns urgency levels (Routine/Urgent/Critical) with RAG-based hospital policy retrieval.
+      Visual drag-drop pipeline builder with 9 custom node types. BaseNode abstraction (-70% code), dynamic {{variable}}
+      handle generation, DAG cycle detection via DFS 3-color algorithm.
+      <a href="https://github.com/Bisenteju3822/my-portfolio/tree/main/vector-shift-project" class="project-link">[GitHub]</a>
     </div>
   </div>
 
   <div class="project-block">
     <div class="project-header">
-      <span class="project-title">AI Pipeline Builder</span>
-      <div class="project-tags">
-        <span class="project-tag">React</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">ReactFlow</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">Zustand</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">FastAPI</span>
-      </div>
+      <span class="project-name">DecideIt — AI Product Decisions</span>
+      <span class="project-tech">Next.js 16 &bull; Groq AI &bull; Supabase &bull; Redis &bull; BullMQ</span>
     </div>
     <div class="project-desc">
-      Visual AI pipeline builder with 9 custom node types. <strong>BaseNode abstraction</strong> reducing per-node code
-      by 70%, dynamic <strong>{{variable}} handle generation</strong> via regex, and <strong>DAG cycle detection</strong>
-      using DFS 3-color algorithm in FastAPI backend.
+      Paste Amazon/Flipkart URL, get AI Buy/Wait/Avoid recommendation. Scrapes reviews, detects fakes, tracks price history.
+      100% free-tier stack (Groq Llama 3.3 70B, Supabase, Upstash Redis).
+      <a href="https://github.com/Bisenteju3822/my-portfolio/tree/main/My-Dream-project" class="project-link">[GitHub]</a>
     </div>
   </div>
 
   <div class="project-block">
     <div class="project-header">
-      <span class="project-title">AI Semantic Search Engine</span>
-      <div class="project-tags">
-        <span class="project-tag">NestJS</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">OpenSearch</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">pgvector</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">OpenAI</span>
-      </div>
+      <span class="project-name">E-Commerce AI Catalog</span>
+      <span class="project-tech">NestJS &bull; React &bull; PostgreSQL &bull; OpenAI &bull; Tailwind</span>
     </div>
     <div class="project-desc">
-      Full-pipeline semantic search: ingests data, generates embeddings via OpenAI, stores in PostgreSQL with pgvector,
-      retrieves via cosine similarity through OpenSearch. 10,000+ embeddings indexed for sub-second contextual retrieval.
-    </div>
-  </div>
-
-  <div class="project-block">
-    <div class="project-header">
-      <span class="project-title">DecideIt — AI Product Decision Platform</span>
-      <div class="project-tags">
-        <span class="project-tag">Next.js</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">Groq AI</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">Supabase</span>
-        <span class="project-tag">·</span>
-        <span class="project-tag">Redis</span>
-      </div>
-    </div>
-    <div class="project-desc">
-      AI-powered shopping assistant that scrapes product pages, analyzes reviews for fake detection, and provides
-      Buy/Wait/Avoid recommendations with confidence scores. Built with free-tier stack: Groq (Llama 3.3 70B),
-      Supabase, Upstash Redis, and BullMQ for background price tracking.
+      AI-enhanced product catalog with intelligent search and data management. NestJS backend with OpenAI integration,
+      React dashboard with login, analytics, and AI query interface.
+      <a href="https://github.com/Bisenteju3822/my-portfolio/tree/main/Magento-New-clean" class="project-link">[GitHub]</a>
     </div>
   </div>
 
   <!-- EDUCATION -->
   <div class="section-title">Education</div>
-  <hr />
-  <div class="edu-header">
-    <span class="edu-title">B.Tech — Computer Science Engineering</span>
+  <div class="edu-block">
+    <div>
+      <span class="edu-degree">B.Tech — Computer Science Engineering</span>
+      <div class="edu-school">Oriental College of Technology, Bhopal &nbsp;|&nbsp; RGPV &nbsp;|&nbsp; 79%</div>
+    </div>
     <span class="exp-date">2024</span>
   </div>
-  <div class="edu-school">Oriental College of Technology, Bhopal &nbsp;|&nbsp; RGPV &nbsp;|&nbsp; 79%</div>
 
   <!-- CORE CS -->
-  <div class="section-title">Core Computer Science</div>
-  <hr />
-  <div class="cs-tags">
-    <span class="cs-tag">Data Structures &amp; Algorithms</span>
-    <span class="cs-tag">Object-Oriented Programming</span>
-    <span class="cs-tag">System Design</span>
-    <span class="cs-tag">Operating Systems</span>
-    <span class="cs-tag">Computer Networks</span>
-    <span class="cs-tag">Graph Algorithms</span>
-    <span class="cs-tag">DBMS</span>
+  <div class="section-title">Core CS Fundamentals</div>
+  <div class="tags">
+    <span class="tag">Data Structures &amp; Algorithms</span>
+    <span class="tag">System Design</span>
+    <span class="tag">OOP</span>
+    <span class="tag">DBMS</span>
+    <span class="tag">Operating Systems</span>
+    <span class="tag">Computer Networks</span>
+    <span class="tag">Graph Algorithms</span>
   </div>
 
 </body>
